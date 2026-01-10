@@ -22,6 +22,7 @@ function initWhatsApp() {
 
         client.on('qr', (qr) => {
             console.log('\n📱 Scannez ce QR code avec WhatsApp:\n');
+            console.log(`🔗 Ou ouvrez ce lien: https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(qr)}`);
             qrcode.generate(qr, { small: true });
         });
 
